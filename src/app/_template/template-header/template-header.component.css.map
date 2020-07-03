@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,MAAM,CAAC;EACL,UAAU,EAAE,MAAS,CAAC,KAAK,CCFrB,OAAO;EDGb,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,IAAO;CAWQ;;AAd1B,AAIE,MAJI,CAIJ,EAAE,CAAC;EACD,WAAW,ECKP,eAAe,EAAE,UAAU;EDJ/B,KAAK,ECFD,OAAO;EDGX,WAAW,EAAE,KAAK;EAClB,WAAW,EAAE,IAAI;EACjB,SAAS,EAAE,IAAO;EAClB,cAAc,EAAE,SAAS;EACzB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CAEU;;AAdxB,AAaI,MAbE,CAIJ,EAAE,CASA,IAAI,CAAC;EACH,KAAK,ECfH,OAAO;CDeO",
+    "sources": [
+        "template-header.component.sass",
+        "../../../style/_var.sass"
+    ],
+    "names": [],
+    "file": "template-header.component.css"
+}

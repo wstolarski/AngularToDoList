@@ -1,0 +1,156 @@
+.todo {
+  width: 100%;
+  background-color: #ffffff;
+  margin: 0 0 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  height: 100%;
+}
+
+.todo .todo-content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo .todo-content .todo-content-drag {
+  background-color: #6AE2D6;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  padding: 0 1rem 0 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.todo .todo-content .todo-content-drag img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.todo .todo-content .todo-content-check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.todo .todo-content .todo-content-check img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.todo .todo-content .todo-content-title {
+  width: 100%;
+}
+
+.todo .todo-content .todo-content-title input {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  padding: 2rem;
+  color: #374855;
+  width: 100%;
+  border: none;
+  word-break: break-word;
+}
+
+.todo .todo-content .todo-content-title input::-webkit-input-placeholder {
+  opacity: 0.5;
+}
+
+.todo .todo-content .todo-content-title input:-ms-input-placeholder {
+  opacity: 0.5;
+}
+
+.todo .todo-content .todo-content-title input::-ms-input-placeholder {
+  opacity: 0.5;
+}
+
+.todo .todo-content .todo-content-title input::placeholder {
+  opacity: 0.5;
+}
+
+.todo .todo-content .todo-content-title input:focus {
+  outline: none;
+}
+
+.todo .remove-button {
+  background-color: #E16C6C;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.todo .remove-button span {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo.done .todo-content .todo-content-drag {
+  display: none;
+}
+
+.todo.done .todo-content .todo-content-title input {
+  opacity: 0.3;
+  text-decoration: line-through;
+}
+/*# sourceMappingURL=template-todo.component.css.map */

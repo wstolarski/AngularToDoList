@@ -1,0 +1,102 @@
+.todo-form {
+  width: 100%;
+  background-color: #6AE2D6;
+  margin: 0 0 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  height: 8rem;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.todo-form .todo-content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.todo-form .todo-content input {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  padding: 2rem;
+  color: #374855;
+  background-color: #6AE2D6;
+  width: 100%;
+  border: none;
+  word-break: break-word;
+}
+
+.todo-form .todo-content input::-webkit-input-placeholder {
+  opacity: 0.5;
+  color: #374855;
+}
+
+.todo-form .todo-content input:-ms-input-placeholder {
+  opacity: 0.5;
+  color: #374855;
+}
+
+.todo-form .todo-content input::-ms-input-placeholder {
+  opacity: 0.5;
+  color: #374855;
+}
+
+.todo-form .todo-content input::placeholder {
+  opacity: 0.5;
+  color: #374855;
+}
+
+.todo-form .todo-content input:focus {
+  outline: none;
+}
+
+.todo-form .add-new-task {
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  padding: 2rem;
+  cursor: pointer;
+  border-left: solid 0.1rem #374855;
+  background-color: #6AE2D6;
+}
+
+.todo-form .add-new-task span {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=template-todo-form.component.css.map */

@@ -1,0 +1,20 @@
+<div class="todo" [class.done]="toDo.status">
+  <div class="todo-content">
+    <div class="todo-content-drag">
+      <img src ="./assets/svg/drag.svg">
+    </div>
+
+    <div class="todo-content-check">
+      <img *ngIf="!toDo.status" (click)="changeCheck($event)" src ="./assets/svg/checkbox-empty.svg">
+      <img *ngIf="toDo.status" (click)="changeCheck($event)" src ="./assets/svg/checkbox-checked.svg">
+    </div>
+
+    <div class="todo-content-title">
+      <input (blur)="changeLabel($event)" type="text" [(ngModel)]="toDo.label" placeholder="New task">
+    </div>
+  </div>
+
+  <div class="remove-button" (click)="deleteToDo($event)">
+    <span>Remove</span>
+  </div>
+</div>
