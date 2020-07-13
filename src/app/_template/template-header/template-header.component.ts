@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./template-header.component.sass']
 })
 export class TemplateHeaderComponent implements OnInit {
+  showDate = Date.now();
 
   constructor() { }
 

@@ -4,18 +4,18 @@
       <rect width="16" height="7" fill="none"/>
     </clipPath>
   </defs>
-  <circle id="Ellipse_1" data-name="Ellipse 1" cx="3.5" cy="3.5" r="3.5" fill="#489ea1"/>
-  <circle id="Ellipse_2" data-name="Ellipse 2" cx="3.5" cy="3.5" r="3.5" transform="translate(9)" fill="#489ea1"/>
+  <circle id="Ellipse_1" data-name="Ellipse 1" cx="3.5" cy="3.5" r="3.5" fill="#161618"/>
+  <circle id="Ellipse_2" data-name="Ellipse 2" cx="3.5" cy="3.5" r="3.5" transform="translate(9)" fill="#161618"/>
   <g id="Repeat_Grid_1" data-name="Repeat Grid 1" transform="translate(0 9)" clip-path="url(#clip-path)">
     <g transform="translate(-27 -39)">
-      <circle id="Ellipse_3" data-name="Ellipse 3" cx="3.5" cy="3.5" r="3.5" transform="translate(27 39)" fill="#489ea1"/>
-      <circle id="Ellipse_4" data-name="Ellipse 4" cx="3.5" cy="3.5" r="3.5" transform="translate(36 39)" fill="#489ea1"/>
+      <circle id="Ellipse_3" data-name="Ellipse 3" cx="3.5" cy="3.5" r="3.5" transform="translate(27 39)" fill="#161618"/>
+      <circle id="Ellipse_4" data-name="Ellipse 4" cx="3.5" cy="3.5" r="3.5" transform="translate(36 39)" fill="#161618"/>
     </g>
   </g>
   <g id="Repeat_Grid_2" data-name="Repeat Grid 2" transform="translate(0 18)" clip-path="url(#clip-path)">
     <g transform="translate(-27 -39)">
-      <circle id="Ellipse_3-2" data-name="Ellipse 3" cx="3.5" cy="3.5" r="3.5" transform="translate(27 39)" fill="#489ea1"/>
-      <circle id="Ellipse_4-2" data-name="Ellipse 4" cx="3.5" cy="3.5" r="3.5" transform="translate(36 39)" fill="#489ea1"/>
+      <circle id="Ellipse_3-2" data-name="Ellipse 3" cx="3.5" cy="3.5" r="3.5" transform="translate(27 39)" fill="#161618"/>
+      <circle id="Ellipse_4-2" data-name="Ellipse 4" cx="3.5" cy="3.5" r="3.5" transform="translate(36 39)" fill="#161618"/>
     </g>
   </g>
 </svg>

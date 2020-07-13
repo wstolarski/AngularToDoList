@@ -1,35 +1,35 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ToDo } from '../../_interface/todo';
+import { EventPing } from 'src/app/_interface/eventping';
 
 @Component({
   selector: 'app-template-todo-form',
   templateUrl: './template-todo-form.component.html',
-  styleUrls: ['./template-todo-form.component.sass']
+  styleUrls: ['./template-todo-form.component.sass'],
 })
 export class TemplateTodoFormComponent implements OnInit {
 
   public toDo: ToDo;
-
-  public addNewTaskToDo(event?: any): void{
-    this.toDo = {
-      id: undefined,
-      label: undefined,
-      status: false,
-      position: undefined
-    };
-    console.log(this.toDo);
-  }
+  @Output() ping: EventEmitter<ToDo> = new EventEmitter<ToDo>();
 
   constructor() {
     this.toDo = {
       id: undefined,
       label: undefined,
       status: false,
-      position: undefined
+      position: undefined,
     };
   }
 
-  ngOnInit(): void {
+  public addNewTaskToDo(event?: any): void {
+    this.ping.emit(this.toDo);
+    this.toDo = {
+      id: undefined,
+      label: undefined,
+      status: false,
+      position: undefined,
+    };
   }
 
+  ngOnInit(): void {}
 }
