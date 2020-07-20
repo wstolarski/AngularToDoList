@@ -1,16 +1,22 @@
 <app-template-header></app-template-header>
-<div class="list-view">
-  <h4 (click)="showOpenTasks=!showOpenTasks">Open <span>( {{todos.length}} )</span></h4>
 
-  <div *ngIf="showOpenTasks" class="todo-elements">
-    <app-template-todo (ping)="update($event)" [toDo]="toDo" *ngFor = "let toDo of todos"></app-template-todo>
+<div class = "list-view">
+<h4>Open</h4>
+  <div *ngIf = "items?.length > 0; else noItems" >
+    <ul *ngFor ="let item of items" class="collection">
+      <app-template-todo *ngIf ="item.status == false" [item]="item"></app-template-todo>
+    </ul>
   </div>
-
-  <app-template-todo-form (ping)="create($event)" *ngIf="showOpenTasks"></app-template-todo-form>
-
-  <h4 (click)="showDoneTasks=!showDoneTasks">Done <span>( {{todosdone.length}} )</span></h4>
-
-  <div *ngIf="showDoneTasks" class="todo-elements">
-    <app-template-todo (ping)="update($event)" [toDo]="toDo" *ngFor = "let toDo of todosdone"></app-template-todo>
+  <app-template-todo-form></app-template-todo-form>
+<h4>Done</h4>
+  <div>
+    <ul *ngFor ="let item of items" class="collection">
+      <app-template-todo *ngIf ="item.status == true" [item]="item"></app-template-todo>
+    </ul>
   </div>
 </div>
+
+<ng-template #noItems>
+  <hr>
+  <h4>There are no tasks to list</h4>
+</ng-template>

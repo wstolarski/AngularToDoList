@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { ToDo } from '../../_interface/todo';
-import { EventPing } from 'src/app/_interface/eventping';
+import { Item } from '../../_interface/item';
+import { DataService } from '../../_service/data.service';
 
 @Component({
   selector: 'app-template-todo',
@@ -9,36 +9,20 @@ import { EventPing } from 'src/app/_interface/eventping';
 })
 export class TemplateTodoComponent implements OnInit {
 
-  @Input() toDo: ToDo;
-  @Output() ping: EventEmitter<any> = new EventEmitter<any>();
-
-  public changeCheck(event?: any): void{
-    this.toDo.status = !this.toDo.status;
-    const eventObject: EventPing = {
-      label: 'check',
-      object: this.toDo
-    };
-    this.ping.emit(eventObject);
-  }
-
-  public changeLabel(event?: any): void{
-    const eventObject: EventPing = {
-      label: 'label',
-      object: this.toDo
-    };
-    this.ping.emit(eventObject);
-  }
-
-  public deleteToDo(event?: any): void{
-    const eventObject: EventPing = {
-      label: 'delete',
-      object: this.toDo
-    };
-    this.ping.emit(eventObject);
-  }
-
-  constructor() {}
+  @Input() item: Item;
+  constructor(private dataService: DataService){}
 
   ngOnInit(): void {}
 
+  deleteItem(event, item: Item){
+    this.dataService.deleteItem(item);
+  }
+  updateItem(item: Item){
+    this.dataService.updateItem(item);
+    console.log(item.id);
+  }
+  changeCheck(item: Item){
+    this.item.status = !this.item.status;
+    this.dataService.changeCheck(item);
+  }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ToDo } from '../_interface/todo';
-import { EventPing } from '../_interface/eventping';
+import { Item } from '../_interface/item';
+import { DataService } from '../_service/data.service';
 
 @Component({
   selector: 'app-page-list',
@@ -8,66 +8,14 @@ import { EventPing } from '../_interface/eventping';
   styleUrls: ['./page-list.component.sass'],
 })
 export class PageListComponent implements OnInit {
-  public showOpenTasks: boolean;
-  public showDoneTasks: boolean;
-  public todos: ToDo[];
-  public todosdone: ToDo[];
-
-  constructor() {
-    this.showOpenTasks = true;
-    this.showDoneTasks = true;
-    this.todos = [
-      {
-        id: 0,
-        label: 'test',
-        status: false,
-        position: 1,
-      },
-    ];
-    this.todosdone = [];
+  items: Item[];
+  
+  constructor(private dataService: DataService){
   }
 
-  ngOnInit(): void {}
-
-  public update(event: EventPing): void {
-    if ('check' === event.label) {
-      if (!event.object.status) {
-        this.todosdone.splice(this.todosdone.indexOf(event.object), 1);
-        this.todos.push(event.object);
-      } else {
-        this.todos.splice(this.todos.indexOf(event.object), 1);
-        this.todosdone.push(event.object);
-      }
-    }
-
-    if ('delete' === event.label) {
-      if (event.object.status) {
-        this.todosdone.splice(this.todosdone.indexOf(event.object), 1);
-      } else {
-        this.todos.splice(this.todos.indexOf(event.object), 1);
-      }
-    }
-
-    if ('label' === event.label) {
-      if (event.object.status) {
-        this.todosdone.forEach((toDo: ToDo) => {
-          if (toDo.id === event.object.id) {
-            toDo.label = event.object.label;
-          }
-        });
-      } else {
-        this.todos.forEach((toDo: ToDo) => {
-          if (toDo.id === event.object.id) {
-            toDo.label = event.object.label;
-          }
-        });
-      }
-    }
+  ngOnInit() {
+    this.dataService.getItems().subscribe(items => {
+      this.items = items;
+    });
   }
-
-  public create(event: ToDo): void {
-    event.position = this.todos.length + 1;
-    this.todos.push(event);
-  }
-
 }

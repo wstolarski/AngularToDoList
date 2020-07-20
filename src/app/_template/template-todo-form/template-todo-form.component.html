@@ -1,11 +1,9 @@
 <div class="todo-form">
-
   <div class="todo-content">
-    <input type="text" (keyup.enter)="addNewTaskToDo($event)" [(ngModel)]="toDo.label" placeholder="New task">
+    <input type="text" (keyup.enter) = "addItem()" [(ngModel)]="item.label" placeholder="New task" >
   </div>
-
-  <div class="add-new-task" (click)="addNewTaskToDo($event)">
+  <div class="add-new-task" (click) = "addItem()">
     <span>Add</span>
   </div>
-
 </div>
+

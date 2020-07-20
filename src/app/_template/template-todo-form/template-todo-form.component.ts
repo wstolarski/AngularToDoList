@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { ToDo } from '../../_interface/todo';
-import { EventPing } from 'src/app/_interface/eventping';
+import { Item } from '../../_interface/item';
+import { DataService } from 'src/app/_service/data.service';
 
 @Component({
   selector: 'app-template-todo-form',
@@ -9,27 +9,19 @@ import { EventPing } from 'src/app/_interface/eventping';
 })
 export class TemplateTodoFormComponent implements OnInit {
 
-  public toDo: ToDo;
-  @Output() ping: EventEmitter<ToDo> = new EventEmitter<ToDo>();
+  item: Item = {
+    label : '',
+    status : false
+  };
 
-  constructor() {
-    this.toDo = {
-      id: undefined,
-      label: undefined,
-      status: false,
-      position: undefined,
-    };
-  }
-
-  public addNewTaskToDo(event?: any): void {
-    this.ping.emit(this.toDo);
-    this.toDo = {
-      id: undefined,
-      label: undefined,
-      status: false,
-      position: undefined,
-    };
-  }
+  constructor(private dataServie: DataService) {}
 
   ngOnInit(): void {}
+
+  addItem(){
+    if(this.item.label != ''){
+      this.dataServie.addItem(this.item);
+      this.item.label = '';
+    }
+  }
 }
